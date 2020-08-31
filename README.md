@@ -23,12 +23,17 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
-1. What problem does the context API help solve?
+1. What problem does the context API help solve?   Prop Drilling
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+Store--- Holds state for the app, known as the single source of truth because it holds the current state Reducer- determines state in the app action-- what we dispacth to modify state
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
-4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
-5. What is your favorite state management system you've learned and this sprint? Please explain why!
+Application state is global and often acted upon by different componenets. Component state is held by just the one component even if it is acted upon by other components. Application state is good when the state is needed by many layers under it (think 5 or 6 layers down the chain) or in a sideways component or even if the applications is very large. Component state is good in smaller applications and for state that isn't needed far down the chains or is only needed inside that particular component.
 
+4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+It simplifies handling asynch operations inside action creators. it allows us to dispatch actions created with thunk inside asynch functions.
+
+5. What is your favorite state management system you've learned and this sprint? Please explain why!
+Redux is the only state management we leanred this sprint and i guess i like it cause it helps reducing bugs by maintainig state unmutable and not changing its value direcly but instead copying it . 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
